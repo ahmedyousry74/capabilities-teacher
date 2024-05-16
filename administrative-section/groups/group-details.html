@@ -492,7 +492,31 @@
                             <div class="col-md-3">
                                 <div class="d-flex justify-content-start align-items-start flex-column gap-2 mb-5">
                                     <p> الحالة </p>
-                                    <span class="group_status continue"> مستمرة </span>
+                                    <span class="group_status continue text-center"> مستمرة </span>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="d-flex justify-content-start align-items-start flex-column gap-2 mb-5">
+                                    <p> نوع المجموعة </p>
+                                    <span class=""> فردى  </span>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="d-flex justify-content-start align-items-start flex-column gap-2 mb-5">
+                                    <p> نوع الدرس </p>
+                                    <span> تحصيلي  </span>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="d-flex justify-content-start align-items-start flex-column gap-2 mb-5">
+                                    <p> السعر للطالب </p>
+                                    <span> 220 ر.س </span>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="d-flex justify-content-start align-items-start flex-column gap-2 mb-5">
+                                    <p> عدد الحصص </p>
+                                    <span> 12</span>
                                 </div>
                             </div>
                         </div>
@@ -598,7 +622,7 @@
                         </table>
                     </div>
                     <div class="tab-pane fade" id="pills-exercises" role="tabpanel" aria-labelledby="pills-exercises-tab" tabindex="0">
-                        <table id="dutiesTable" class="display" style="width: 100%">
+                        <table id="exerciseTable" class="display" style="width: 100%">
                           <thead>
                             <tr>
                               <th>اسم التمرين</th>
@@ -697,7 +721,6 @@
             [5, 10, 25, 50, "All"],
           ],
           responsive: true,
-          scrollX: true,
           language: {
             search: "_INPUT_",
             searchPlaceholder: "بحث",
@@ -726,7 +749,6 @@
             [5, 10, 25, 50, "All"],
           ],
           responsive: true,
-          scrollX: true,
           language: {
             search: "_INPUT_",
             searchPlaceholder: "بحث",
@@ -755,7 +777,34 @@
             [5, 10, 25, 50, "All"],
           ],
           responsive: true,
-          scrollX: true,
+          language: {
+            search: "_INPUT_",
+            searchPlaceholder: "بحث",
+            lengthMenu: "_MENU_",
+            paginate: {
+              first: "الأول",
+              last: "الأخير",
+              next: "التالي",
+              previous: "السابق",
+            },
+          },
+        });
+        $(".dataTables_filter input").addClass("form-control");
+        $(".dataTables_length select").addClass("form-select");
+      });
+    </script>
+    <script>
+      $(document).ready(function () {
+        var table = $("#exerciseTable").DataTable({
+          dom:
+            "<'row'<'col-sm-12 col-md-6 length_'l><'col-sm-12 col-md-6 search_'f>>" +
+            "<'row'<'col-sm-12 table_layout'tr>>" +
+            "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
+          lengthMenu: [
+            [5, 10, 25, 50, -1],
+            [5, 10, 25, 50, "All"],
+          ],
+          responsive: true,
           language: {
             search: "_INPUT_",
             searchPlaceholder: "بحث",
@@ -784,7 +833,6 @@
             [5, 10, 25, 50, "All"],
           ],
           responsive: true,
-          scrollX: true,
           language: {
             search: "_INPUT_",
             searchPlaceholder: "بحث",
@@ -813,7 +861,6 @@
             [5, 10, 25, 50, "All"],
           ],
           responsive: true,
-          scrollX: true,
           language: {
             search: "_INPUT_",
             searchPlaceholder: "بحث",
@@ -842,7 +889,6 @@
             [5, 10, 25, 50, "All"],
           ],
           responsive: true,
-          scrollX: true,
           language: {
             search: "_INPUT_",
             searchPlaceholder: "بحث",
